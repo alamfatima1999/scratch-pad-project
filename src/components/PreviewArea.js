@@ -68,43 +68,48 @@ export default function PreviewArea() {
     };
 
     return (
-        <div className="flex-none w-full h-full overflow-y-auto p-2">
-            <CatSprite id="movingCat" className="transition-all" />
-            <div className="fixed right-5 bottom-5 flex justify-between w-80">
-                <button
-                    className="bg-green-500 hover:bg-green-700 text-gray-50 h-12 w-24 rounded"
-                    onClick={handleRun}
-                >
-                    Run
-                </button>
-                <button
-                    className="bg-green-500 hover:bg-green-700 text-gray-50 h-12 w-24 rounded"
-                    onClick={handleRunAll}
-                >
-                    Run All Sprite
-                </button>
-                <button
-                    className="bg-red-500 hover:bg-red-700 text-gray-50 h-12 w-24 rounded"
-                    onClick={handleReset}
-                >
-                    Reset
-                </button>
+        <div className="flex flex-col w-full h-full overflow-y-auto p-2">
+            <div className="w-full h-3/4  p-2">
+                <CatSprite id="movingCat" className="transition-all" />
             </div>
-            <div className="fixed right-5 bottom-20 flex justify-end w-80">
-                <input
-                    type="text"
-                    placeholder="Repeat last n actions"
-                    value={repeatCount}
-                    onChange={(e) => setRepeatCount(e.target.value)}
-                    className="border border-gray-300 rounded px-3 py-2 mr-2 w-46"
-                />
-                <button
-                    className="bg-blue-500 hover:bg-blue-700 text-gray-50 h-12 w-24 rounded"
-                    onClick={handleRepeatLastActions}
-                >
-                    Replay
-                </button>
+            <div className=" w-full h-1/4">
+                <div className="fixed right-5 bottom-5 flex justify-between w-80">
+                    <button
+                        className="bg-green-500 hover:bg-green-700 text-gray-50 h-12 w-24 rounded"
+                        onClick={handleRun}
+                    >
+                        Run
+                    </button>
+                    <button
+                        className="bg-green-500 hover:bg-green-700 text-gray-50 h-12 w-24 rounded"
+                        onClick={handleRunAll}
+                    >
+                        Run All Sprite
+                    </button>
+                    <button
+                        className="bg-red-500 hover:bg-red-700 text-gray-50 h-12 w-24 rounded"
+                        onClick={handleReset}
+                    >
+                        Reset
+                    </button>
+                </div>
+                <div className="fixed right-5 bottom-20 flex justify-end w-80">
+                    <input
+                        type="text"
+                        placeholder="Repeat last n actions"
+                        value={repeatCount}
+                        onChange={(e) => setRepeatCount(e.target.value)}
+                        className="border border-gray-300 rounded px-3 py-2 mr-2 w-46"
+                    />
+                    <button
+                        className="bg-blue-500 hover:bg-blue-700 text-gray-50 h-12 w-24 rounded"
+                        onClick={handleRepeatLastActions}
+                    >
+                        Replay
+                    </button>
+                </div>
             </div>
+            
         </div>
     );
 }
