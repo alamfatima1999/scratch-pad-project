@@ -81,4 +81,10 @@ This visual code editor for Javascript that is similar to MIT Scratch : https://
 4. `Press Run to execute current sprite actions, Press Run All to execute all sprite actions, & Reset to reset cat position`;
 5. `Add a number & you can replay last n actions performed on the sprite`;
 
+## Deployed on:
+
+Vercel : https://scratch-pad-project.vercel.app/
+
+Netlify : https://scratch-pad-project.netlify.app/
+
 
