@@ -9,6 +9,11 @@ export const controlActions = async (command) => {
                 if (splitCmdResult.length < 3) {
                     throw new Error('Invalid command format for Wait');
                 }
+                const toastConfig = {
+                    duration: parseInt(splitCmdResult[1]) * 1000,
+                    position: 'top-right',
+                };
+                toast(command, toastConfig);
                 await sleepCatSprite(parseInt(splitCmdResult[1]), splitCmdResult[2]);
                 break;
 
