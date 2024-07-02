@@ -1,1 +1,1 @@
-export const HistoryCount = 3;
+export const HistoryCount = 20;
