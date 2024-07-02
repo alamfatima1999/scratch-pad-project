@@ -1,5 +1,5 @@
 import React from 'react';
-import { InstructionMessage1, InstructionMessage2, InstructionMessage3, InstructionMessage4, InstructionMessage5 } from '../constants/instructionMessage';
+import { InstructionMessage1, InstructionMessage2, InstructionMessage3, InstructionMessage4, InstructionMessage5, InstructionMessage6 } from '../constants/instructionMessage';
 
 function Instructions({ isOpen, onRequestClose }) {
     if (!isOpen) return null;
@@ -13,6 +13,7 @@ function Instructions({ isOpen, onRequestClose }) {
                 <p className="mb-4">{InstructionMessage3}</p>
                 <p className="mb-4">{InstructionMessage4}</p>
                 <p className="mb-4">{InstructionMessage5}</p>
+                <p className="mb-4">{InstructionMessage6}</p>
                 <button
                     onClick={onRequestClose}
                     className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
